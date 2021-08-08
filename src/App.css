@@ -48,6 +48,7 @@ h3 {
   background-color: #d0e4f5;
 }
 .buttonOfProperty {
+  margin: 0 5px;
   cursor: pointer;
   display: block;
   padding: 1px 7px 3px;
