@@ -10,7 +10,6 @@
   text-align: center;
   width: 100%;
   position: relative;
-  height: 500px;
 }
 #randomImg {
   width: 80%;
@@ -35,7 +34,11 @@ img {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-
+label {
+  font-size: small;
+  padding: 5px !important;
+  font-weight: bolder;
+}
 @media only screen and (max-width: 600px) {
   .cardOfOption {
     margin-bottom: 10px;
@@ -44,5 +47,8 @@ img {
     height: initial !important;
     width: 250px;
     height: inherit;
+  }
+  label {
+    display: inline !important;
   }
 }

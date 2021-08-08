@@ -12,6 +12,14 @@
   );
   min-height: 76vh;
 }
+.bgOfDownload {
+  background-color: rgb(0 0 0 / 8%) !important;
+}
+.spinner-border {
+  display: block;
+  position: absolute;
+  top: 50%;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

@@ -6,45 +6,42 @@ const TextStyles = (props) => {
             <h3 className='text-dark text-center'>{props.topText != null ? 'Top Text' : 'Bottom Text'}</h3>
             <MDBCard className='text-left' style={{ margin: 'auto' }}>
                 <div className='col-sm-12'>
-                    <label className='col-sm-6'>Text: </label>
+                    <label className='col-sm-4'>Text: </label>
                     <input type='text'
-                        className='col-sm-6'
+                        className='col-sm-8'
                         name={props.topText != null ? 'topText' : 'bottomText'}
                         value={props.topText != null ? props.topText : props.bottomText}
                         onChange={props.ChangeHandler}>
                     </input>
                     <br />
-                    <label for="head" className='col-sm-10'>Color: </label>
+                    <label for="head" className='col-sm-4'>Color: </label>
                     <input onChange={props.setColor} type="color" id="head"
-                        className='col-sm-2'
                         name="topTextColor"
                         name={props.topTextColor != null ? 'topTextColor' : 'bottomTextColor'}
                         value={props.topTextColor != null ? props.topTextColor : props.bottomTextColor}
                     >
                     </input>
                     <br />
-                    <label className='col-sm-8 col-lg-4'>X Position:</label>
+                    <label className='col-lg-4'>X Position:</label>
                     <input type='number'
                         placeholder='X position'
                         onChange={props.changePosiotiontTopText != null ? props.changePosiotiontTopText : props.changePosiotiontBottomText}
-                        className='col-sm-4 col-lg-2'
                         name={props.topPositionX != null ? 'topPositionX' : 'topPositionXBottom'}
                         value={props.topPositionX != null ? props.topPositionX : props.topPositionXBottom}
                         step='50'>
                     </input>
-
+                    <br />
                     <label className='col-sm-8 col-lg-4'>Y Position:</label>
                     <input type='number'
                         placeholder='Y position'
-                        className='col-sm-4 col-lg-2'
                         onChange={props.changePosiotiontTopText != null ? props.changePosiotiontTopText : props.changePosiotiontBottomText}
                         name={props.topPositionY != null ? 'topPositionY' : 'topPositionYBottom'}
                         value={props.topPositionY != null ? props.topPositionY : props.topPositionYBottom}
                         step='50'>
                     </input>
-
+                    <br />
                     <>
-                        <label className='col-sm-12 col-lg-4'>Weight:</label>
+                        <label className='col-lg-4'>Weight:</label>
                         <span className='col-sm-12 col-lg-8'>
                             {
                                 props.fontWeight.map(font => {
@@ -102,6 +99,7 @@ const TextStyles = (props) => {
                                 })
                             }
                         </span>
+                        <br />
                         <label className='col-sm-12 col-lg-4'>Style:</label>
                         <span className='col-sm-12 col-lg-8'>
                             {
