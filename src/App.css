@@ -71,10 +71,7 @@ footer p {
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
-label {
-  font-size: small;
-  padding: 5px !important;
-}
+
 label.fas.fa-upload.fa-2x.pointer {
   padding: 0 !important;
   margin: 0 !important;
@@ -145,5 +142,15 @@ input[type="number"] {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@media only screen and (max-width: 600px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: large !important;
   }
 }

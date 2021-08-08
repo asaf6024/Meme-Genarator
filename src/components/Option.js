@@ -7,7 +7,7 @@ const Option = (props) => {
             <MDBCol sm='12' md='4' className='cardOfOption' id={`option${props.optionNumber}`}>
                 <MDBCard id={`cardOption${props.optionNumber}`}>
                     <h3 style={{ display: props.display }}>Option {props.optionNumber}</h3>
-                    <label className={`col-sm-12 ${props.classOfHeadline}`}>{props.optionType}</label>
+                    <h4 className={`col-sm-12 h6 ${props.classOfHeadline}`}>{props.optionType}</h4>
                     {
                         props.optionTag == 'Text' ?
                             <input type='text' size='200'
