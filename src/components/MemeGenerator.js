@@ -24,6 +24,8 @@ class MemeGenerator extends React.Component {
             urlImg: '',
             topTextColor: '',
             bottomTextColor: '',
+            topTextSize: '',
+            bottomTextSize: '',
             topPositionX: null,
             topPositionY: null,
             topPositionXBottom: null,
@@ -32,6 +34,7 @@ class MemeGenerator extends React.Component {
             cardText: '',
             display: 'none',
             memeTextsDisplay: 'none',
+            visibility: '',
             disable1: '',
             disable2: '',
             disable3: '',
@@ -72,10 +75,13 @@ class MemeGenerator extends React.Component {
 
                 this.setState({
                     allMemeImages: memes, topTextColor: '#ffffff', bottomTextColor: '#ffffff',
+                    topTextSize: '24',
+                    bottomTextSize: '24',
                     topPositionX: 0, topPositionY: 0,
                     topPositionXBottom: 50, topPositionYBottom: 50,
                     cardText: 'Select your Option',
                     displayReset: 'none',
+                    visibility: '',
                     fontWeight: fontWeight,
                     fontDecoration: fontDecoration,
                     fontStyle: fontStyle,
@@ -199,7 +205,8 @@ class MemeGenerator extends React.Component {
             display: 'block',
             memeTextsDisplay: 'block',
             displayCardText: 'none',
-            classOfHeadline: 'font-weight-bold h2'
+            classOfHeadline: 'font-weight-bold h2',
+            visibility: 'hidden'
         })
         this.gererateActive(event.target.id)
     }
@@ -263,6 +270,14 @@ class MemeGenerator extends React.Component {
             [name]: value
         })
     }
+    // setSize(event) {
+    //     event.preventDefault()
+
+    //     const { name, value } = event.target
+    //     this.setState({
+    //         [name]: value
+    //     })
+    // }
     changePosiotiontTopText(event) {
         const { name, value } = event.target
         this.setState({
@@ -344,6 +359,7 @@ class MemeGenerator extends React.Component {
                             optionType={'Find a random image:'}
                             optionTag={'Click to find'}
                             ChangeImg={this.ChangeImg}
+                            visibility={this.state.visibility}
                         />
                     </MDBRow>
                     <hr />
@@ -360,8 +376,8 @@ class MemeGenerator extends React.Component {
 
                                     <Tabs className='text-center'>
                                         <TabList>
-                                            <Tab>Top Text</Tab>
-                                            <Tab>Bottom text</Tab>
+                                            <Tab>First Text</Tab>
+                                            <Tab>Second text</Tab>
                                         </TabList>
                                         <TabPanel>
                                             <TextStyles
@@ -369,6 +385,7 @@ class MemeGenerator extends React.Component {
                                                 ChangeHandler={this.ChangeHandler}
                                                 setColor={this.setColor}
                                                 topTextColor={this.state.topTextColor}
+                                                topTextSize={this.state.topTextSize}
                                                 changePosiotiontTopText={this.changePosiotiontTopText}
                                                 topPositionX={this.state.topPositionX}
                                                 topPositionY={this.state.topPositionY}
@@ -388,6 +405,7 @@ class MemeGenerator extends React.Component {
                                                 ChangeHandler={this.ChangeHandler}
                                                 setColor={this.setColor}
                                                 bottomTextColor={this.state.bottomTextColor}
+                                                bottomTextSize={this.state.bottomTextSize}
                                                 changePosiotiontBottomText={this.changePosiotiontBottomText}
                                                 topPositionXBottom={this.state.topPositionXBottom}
                                                 topPositionYBottom={this.state.topPositionYBottom}
@@ -410,8 +428,10 @@ class MemeGenerator extends React.Component {
                                 randomImg={this.state.randomImg}
                                 topTextColor={this.state.topTextColor}
                                 topText={this.state.topText}
+                                topTextSize={this.state.topTextSize}
                                 bottomText={this.state.bottomText}
                                 bottomTextColor={this.state.bottomTextColor}
+                                bottomTextSize={this.state.bottomTextSize}
                                 fontWeight={this.state.fontWeight.filter(a => a.selected)}
                                 fontDecoration={this.state.fontDecoration.filter(a => a.selected)}
                                 fontStyle={this.state.fontStyle.filter(a => a.selected)}
@@ -422,6 +442,8 @@ class MemeGenerator extends React.Component {
                                 fontStyle2={this.state.fontStyle2.filter(a => a.selected)}
                                 fontVariante2={this.state.fontVariante2.filter(a => a.selected)}
                                 fontTransform2={this.state.fontTransform2.filter(a => a.selected)}
+                                ChangeImg={this.ChangeImg}
+                                visibility={this.state.visibility}
                             />
                         </MDBRow>
                     </MDBCard>

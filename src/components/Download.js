@@ -6,6 +6,12 @@ const Download = (props) => {
     const ref = useRef(null)
     const [display, setDisplay] = useState('none')
 
+    useEffect(() => {
+
+        props.randomImg.length > 10 &&
+            window.scroll(0, 200)
+
+    })
     const onButtonClick = useCallback(() => {
         if (ref.current === null) {
             return
@@ -26,10 +32,15 @@ const Download = (props) => {
 
     return (
         <>
-            <MDBCol sm='12' md='6' style={{ display: props.display }}>
+            <MDBCol sm='12' md='6' style={{ display: props.display, margin: 'auto' }}>
                 <div className="spinner-border" role="status" style={{ display }}>
                     <span className="sr-only">Loading...</span>
                 </div>
+                {
+                    props.visibility == 'hidden' &&
+                    <i className="fas fa-random fa-2x" title='Find' id='3' onClick={props.ChangeImg} style={{ cursor: 'pointer' }}>
+                    </i>
+                }
                 <div ref={ref} >
                     <div id='imgDiv' >
                         <img id='randomImg' src={props.randomImg} alt='' />
@@ -38,6 +49,7 @@ const Download = (props) => {
                             <h2 id='topText'
                                 style={{
                                     color: props.topTextColor,
+                                    fontSize: `${props.topTextSize}pt`,
                                     fontWeight: props.fontWeight.map(a => a.name),
                                     textDecoration: props.fontDecoration.map(a => a.name),
                                     fontStyle: props.fontStyle.map(a => a.name),
@@ -48,6 +60,7 @@ const Download = (props) => {
                                 {props.topText}</h2>
                             <h2 id='bottomText' style={{
                                 color: props.bottomTextColor,
+                                fontSize: `${props.bottomTextSize}pt`,
                                 fontWeight: props.fontWeight2.map(a => a.name),
                                 textDecoration: props.fontDecoration2.map(a => a.name),
                                 fontStyle: props.fontStyle2.map(a => a.name),

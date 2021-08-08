@@ -11,13 +11,14 @@ const Option = (props) => {
                     {
                         props.optionTag == 'Text' ?
                             <input type='text' size='200'
+                                title='Paste Url'
                                 id='1'
                                 className='col-sm-12'
                                 onChange={props.insertUrlToImg} >
                             </input>
                             : props.optionTag == 'File' ?
                                 <>
-                                    <label for="2" className="fas fa-upload fa-2x pointer" style={{ display: 'inline' }}></label>
+                                    <label for="2" className="fas fa-upload fa-2x pointer" style={{ display: 'inline' }} title='Upload'></label>
                                     <input type="file" id='2' accept=".png, .jpg, .jpeg"
                                         className='col-sm-12'
                                         style={{ display: 'none' }}
@@ -25,7 +26,7 @@ const Option = (props) => {
                                     </input>
                                 </>
                                 :
-                                <i className="fas fa-random fa-2x" id='3' onClick={props.ChangeImg} style={{ cursor: 'pointer' }}>
+                                <i className="fas fa-random fa-2x" id='3' title='Find' onClick={props.ChangeImg} style={{ cursor: 'pointer', visibility: props.visibility }}>
                                 </i>
 
                         // <Button onClick={props.ChangeImg} as="input" type="submit" value="Submit" value={props.optionTag} />

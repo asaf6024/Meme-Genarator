@@ -111,7 +111,7 @@ header {
   font-weight: bold;
 }
 input[type="number"] {
-  font-size: 8pt !important;
+  /* font-size: 8pt !important; */
   padding: 0;
 }
 

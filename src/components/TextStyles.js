@@ -3,7 +3,7 @@ import { MDBCol, MDBCard } from 'mdbreact'
 const TextStyles = (props) => {
     return (
         <MDBCol sm='12'>
-            <h3 className='text-dark text-center'>{props.topText != null ? 'Top Text' : 'Bottom Text'}</h3>
+            <h3 className='text-dark text-center'>{props.topText != null ? 'First Text' : 'Second Text'}</h3>
             <MDBCard className='text-left' style={{ margin: 'auto' }}>
                 <div className='col-sm-12'>
                     <label className='col-sm-4'>Text: </label>
@@ -16,9 +16,15 @@ const TextStyles = (props) => {
                     <br />
                     <label for="head" className='col-sm-4'>Color: </label>
                     <input onChange={props.setColor} type="color" id="head"
-                        name="topTextColor"
                         name={props.topTextColor != null ? 'topTextColor' : 'bottomTextColor'}
                         value={props.topTextColor != null ? props.topTextColor : props.bottomTextColor}
+                    >
+                    </input>
+                    <br />
+                    <label for="size" className='col-sm-4'>Font Size: </label>
+                    <input onChange={props.setColor} type="number" id="size"
+                        name={props.topTextSize != null ? 'topTextSize' : 'bottomTextSize'}
+                        value={props.topTextSize != null ? props.topTextSize : props.bottomTextSize}
                     >
                     </input>
                     <br />
