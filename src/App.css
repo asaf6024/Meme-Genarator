@@ -1,0 +1,141 @@
+.App {
+  text-align: center;
+}
+.container-fluid {
+  background: rgb(53, 70, 49);
+  background: linear-gradient(
+    90deg,
+    rgb(94 120 88 / 25%) 0%,
+    rgb(78 81 114) 0%,
+    rgb(124 55 55) 23%,
+    rgba(15, 36, 55, 1) 74%
+  );
+  min-height: 76vh;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.col-md-6 {
+  display: inline-block;
+}
+img {
+  position: relative !important;
+}
+h1 {
+  margin: 0 !important;
+}
+h2,
+i {
+  color: #fff;
+}
+h3 {
+  /* font-size: medium; */
+  font-weight: bolder !important;
+}
+.selectedTextDecoration {
+  background-color: #d0e4f5;
+}
+.buttonOfProperty:hover {
+  background-color: #d0e4f5;
+}
+.buttonOfProperty {
+  cursor: pointer;
+  display: block;
+  padding: 1px 7px 3px;
+  text-align: center;
+  border: 1px solid #ddd;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+footer {
+  background-color: #212529;
+  height: 120px;
+}
+footer p {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  text-align: center;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+label {
+  font-size: small;
+  padding: 5px !important;
+}
+label.fas.fa-upload.fa-2x.pointer {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.active {
+  background: white;
+  color: black;
+}
+hr {
+  height: 5px !important;
+  border: 0 !important;
+  margin: 15px !important;
+  box-shadow: inset 0 10px 10px -10px #fff !important;
+}
+.notActive {
+  display: none !important;
+}
+.pointer {
+  cursor: pointer;
+}
+.fa-random {
+  color: black;
+}
+/* .pointer:hover {
+  font-size: x-large;
+} */
+.cardOfOption .card {
+  padding: 15px;
+}
+
+.card .col-sm-12 {
+  padding: 5px !important;
+}
+header {
+  background-color: #212529;
+  color: #fff;
+  font-weight: bold;
+}
+input[type="number"] {
+  font-size: 8pt !important;
+  padding: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

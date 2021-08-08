@@ -1,0 +1,48 @@
+#memeTexts {
+  display: none;
+  margin: auto;
+  text-align: left;
+}
+#headerText {
+  position: relative;
+}
+#imgDiv {
+  text-align: center;
+  width: 100%;
+  position: relative;
+  height: 500px;
+}
+#randomImg {
+  width: 80%;
+  height: initial;
+}
+img {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+#imgTexts {
+  z-index: 1;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  margin: 0;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 600px) {
+  .cardOfOption {
+    margin-bottom: 10px;
+  }
+  img {
+    height: initial !important;
+    width: 250px;
+    height: inherit;
+  }
+}
