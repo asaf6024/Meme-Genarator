@@ -74,10 +74,14 @@ const Download = (props) => {
                 </div>
 
             </MDBCol>
-            <MDBCol sm='12' style={{ display: props.display }} className='text-center bgOfDownload'>
-                <i className="fas fa-download fa-3x text-dark pointer" title='Download' onClick={onButtonClick}></i>
-                <h3 className='text-dark'>Download</h3>
-            </MDBCol>
+            {
+                props.visibility == 'hidden' &&
+                <MDBCol sm='12' style={{ display: props.display }} className='text-center bgOfDownload'>
+                    <i className="fas fa-download fa-3x text-dark pointer" title='Download' onClick={onButtonClick}></i>
+                    <h3 className='text-dark'>Download</h3>
+                </MDBCol>
+            }
+
         </>
     )
 }

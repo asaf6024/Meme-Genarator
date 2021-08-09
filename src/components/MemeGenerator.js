@@ -79,7 +79,7 @@ class MemeGenerator extends React.Component {
                     bottomTextSize: '24',
                     topPositionX: 0, topPositionY: 0,
                     topPositionXBottom: 50, topPositionYBottom: 50,
-                    cardText: 'Select your Option',
+                    cardText: 'Select one Option',
                     displayReset: 'none',
                     visibility: '',
                     fontWeight: fontWeight,
@@ -340,7 +340,7 @@ class MemeGenerator extends React.Component {
                             display={this.state.displayCardText}
                             classOfHeadline={this.state.classOfHeadline}
                             optionNumber={1}
-                            optionType={'Paste your image url:'}
+                            optionType={'Paste a image url:'}
                             optionTag={'Text'}
                             insertUrlToImg={this.insertUrlToImg}
                         />
