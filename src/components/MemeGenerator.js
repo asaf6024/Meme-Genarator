@@ -214,7 +214,6 @@ class MemeGenerator extends React.Component {
     insertUrlToImg(event) {
         // event.preventDefault()
 
-        console.log('event', event.target)
         this.setState({
             randomImg: event.target.value,
             display: 'block',

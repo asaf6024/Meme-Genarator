@@ -51,7 +51,6 @@ const TextStyles = (props) => {
                         <span className='col-sm-12 col-lg-8'>
                             {
                                 props.fontWeight.map(font => {
-                                    console.log('props.fontWeight', props.fontWeight)
                                     let classActive = ''
                                     if (font.selected)
                                         classActive = 'selectedTextDecoration'
