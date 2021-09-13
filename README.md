@@ -1,4 +1,4 @@
-# Meme-Genarator
+# Meme Genarator
 ##  [Live Demo](https://meme-generator-asaf.netlify.app/)
 
 A simple React app that allows to display some text on an image from 3 sources:
