@@ -339,7 +339,7 @@ class MemeGenerator extends React.Component {
                             display={this.state.displayCardText}
                             classOfHeadline={this.state.classOfHeadline}
                             optionNumber={1}
-                            optionType={'Paste a image url:'}
+                            optionType={'Paste an image url:'}
                             optionTag={'Text'}
                             insertUrlToImg={this.insertUrlToImg}
                         />
