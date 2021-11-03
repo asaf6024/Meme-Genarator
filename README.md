@@ -3,9 +3,9 @@
 
 A simple React app that allows to display some text on an image from 3 sources:
 
-- Imgflip API (find a random image)
-- Local image file
 - URL of an image
+- Local image file
+- Imgflip API (find a random image)
 
 ![Home Page](https://my-portfolio-asaf.netlify.app/img/websites/meme.jpg)
 
