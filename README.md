@@ -3,7 +3,7 @@
 
 A simple React app that allows to display some text on an image from 3 sources:
 
-- URL of an image
+- Image URL
 - Local image file
 - Imgflip API (find a random image)
 
